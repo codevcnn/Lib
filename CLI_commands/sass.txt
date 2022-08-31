@@ -2,15 +2,19 @@
 // note
 # []: có hay ko cũng dc
 # <>: phải có
+# -g: global
 
-// sass commands
+// sass commands -g
 $ node \Users\dell\AppData\Roaming\npm\node_modules\sass\sass.js --help
 
-// sass watch CÓ nhúng src map
+// sass watch local của nodejs CÓ nhúng src map
 $ {
     node node_modules/sass/sass.js -w <path to folder contains sass file , begin from... 
     standing folder>:<path to folder contains css file , begin from... 
     standing folder> --embed-source-map
+
+    # mục đích là truy cập vào folder node_modules có chứa sass và truy cập vào file js của... 
+    sass để chạy
 } 
 # VD: We have the following folder tree {
     test/
