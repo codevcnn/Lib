@@ -8,8 +8,9 @@ $ node \Users\dell\AppData\Roaming\npm\node_modules\sass\sass.js --help
 
 // sass watch CÓ nhúng src map
 $ {
-    node node_modules/sass/sass.js -w <path to folder contains sass file , begin from standing folder>:<
-    path to folder contains css file , begin from standing folder> --embed-source-map
+    node node_modules/sass/sass.js -w <path to folder contains sass file , begin from... 
+    standing folder>:<path to folder contains css file , begin from... 
+    standing folder> --embed-source-map
 } 
 # VD: We have the following folder tree {
     test/

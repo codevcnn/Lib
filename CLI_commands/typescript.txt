@@ -1,0 +1,28 @@
+// config typescript (tsc.cmd)
+#B1: mở terminal và điều hướng đến thư mục cần tạo file tsconfig.json
+#B2: gõ lệnh{
+    $ tsc.cmd --init
+    # lúc này có 1 file tsconfig.json dc tạo tại thư mục ở B1
+}
+#B3: truy cập vào tsconfig.json và tìm key "outDir"{
+    bỏ cmt key "outDir" và sửa value key "outDir" thành <path to folder with level... 
+    is lower than folder contains tsconfig created in B1 , begin from /Users>
+    #VD: We have the following folder tree {
+        test/
+        |---alpha/
+        |   |---src/
+        |   tsconfig.json
+        |---beta/
+
+        # lúc này "outDir": "/Users/dell/Documents/Code_VCN/test/alpha"
+        ** lưu ý là ko dc dẫn đến thư mục có cấp cao hơn thư mục chứa file tsconfig.json
+    }
+}
+Xong!!
+
+// dùng tsc.cmd với CLI
+# dùng flag --outDir để điều hướng việc xuất file js từ file ts
+$ tsc.cmd --outDir <path to folder need to export , begin from value key "outDir"... 
+    trong file tsconfig.json>
+# dùng flag --watch để watch file ts
+$ tsc.cmd --watch <path to folder need to export , begin from standing folder>
