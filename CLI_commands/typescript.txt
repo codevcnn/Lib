@@ -1,2 +1,0 @@
-// đẩy code lên branch main của repo tên origin 
-$ git push origin main
