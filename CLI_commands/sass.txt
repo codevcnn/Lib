@@ -18,7 +18,7 @@ $ {
     |---beta/
     |---app.css
 
-    # want to compile app.scss to app.css => {
-        C:\Users\dell\docs\codevcn\test > node node_modules/sass/sass.js -w alpha/:./
+    # want to compile app.scss to app.css and embed src map (embed into css file) => {
+        C:\Users\dell\docs\codevcn\test > node node_modules/sass/sass.js -w alpha/:./ --embed-source-map
     }
 }
