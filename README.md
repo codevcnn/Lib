@@ -1,3 +1,0 @@
-# Lib
-
-Hàm built-in
