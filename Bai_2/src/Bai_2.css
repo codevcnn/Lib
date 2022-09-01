@@ -1,0 +1,37 @@
+@import 'http://fonts.cdnfonts.com/css/engender-mod-font';
+.nav_bar {
+  position: fixed;
+  background: black;
+  height: 60px;
+  width: 100vw;
+}
+.nav_bar .logo_area {
+  position: absolute;
+  display: flex;
+  left: 30px;
+  height: 80%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.nav_bar .logo_area .logo {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  fill: white;
+}
+.nav_bar .logo_area .title_page {
+  display: inline-block;
+  color: white;
+  font-family: "Engender Mod", sans-serif;
+  margin-left: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*# sourceMappingURL=Bai_2.css.map */

@@ -1,0 +1,33 @@
+
+.nav_bar {
+    position: fixed;
+    background: black;
+    height: 60px;
+    width: 100vw;
+
+    .logo_area {
+        position: absolute;
+        display: flex;
+        left: 30px;
+        height: 80%;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+
+        .logo {
+            height: 100%;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin: auto;
+            fill: white;
+        }
+        
+        .title_page {
+            display: inline-block;
+            color: white;
+            font-family: "Engender Mod", sans-serif;
+            margin-left: 10px;
+        }
+    }
+}
