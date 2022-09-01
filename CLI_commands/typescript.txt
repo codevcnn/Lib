@@ -10,7 +10,7 @@
 }
 #B4: truy cập vào tsconfig.json và tìm key "outDir"{
     bỏ cmt key "outDir" và sửa value key "outDir" thành <path to folder with level... 
-    is lower than folder contains tsconfig created in B1 , begin from /Users>
+    is lower than folder contains tsconfig created in B1 , begin from folder contains tsconfig.json>
     #VD: We have the following folder tree {
         test/
         |---alpha/
@@ -27,7 +27,14 @@ Xong!!
 // dùng tsc.cmd với CLI
 # dùng flag --watch để watch file ts từ rootDir đến outDir
 $ tsc.cmd --watch
+
+// dùng include và exclude để lọc file muốn dịch
+# include: dành cho file muốn dịch
+# exclude: dành cho file KO muốn dịch
 # dùng flag --outDir để điều hướng việc xuất file js từ file ts (flag này ko liên quan j... 
     đến việc config rootDir & outDir)
 $ tsc.cmd --outDir <path to folder need to export , begin from standing folder> (command...
     này giống như command tsc.cmd hello.ts nhưng khác là có thêm việc điều hướng folder xuất file)
+
+** Chưa tìm dc cách để dịch 1 folder bên ngoài folder chứa file tsconfig.json
+** Chưa tìm dc cách để dịch 2 file ts nằm ở 2 folder khác nhau
