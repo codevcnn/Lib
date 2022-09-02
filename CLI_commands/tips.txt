@@ -1,7 +1,9 @@
 
-// xem tất cả các module dc cài đặt global
+- xem tất cả các module dc cài đặt global:
 $ npm ls -g --depth 0
 
-// dùng CLI để run package
+- dùng CLI để run package:
 $ node ./node_modules/sass/sass.js <command>
-# VD: xem version: node ./node_modules/sass/sass.js --version
+VD: xem version {
+    $ node ./node_modules/sass/sass.js --version
+} 

@@ -1,6 +1,9 @@
 
-# create a new repository on the command line{
-    $${
+* Github
+
+- create a new repository on the command line:
+{
+    ${
         echo "# Lib" >> README.md
         git init
         git add README.md
@@ -11,8 +14,9 @@
     }
 }
 
-# push an existing repository from the command line{
-    $${
+- push an existing repository from the command line:
+{
+    ${
         git remote add origin https://github.com/codevcnn/Lib.git
         git branch -M main
         git push -u origin main
