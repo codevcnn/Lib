@@ -11,4 +11,5 @@
     -g: global
     ** __t: lưu ý
     #: comment
+    /*__t*/: comment trong khu vực /**/
 }

@@ -7,7 +7,7 @@
     }
     B3: truy cập vào tsconfig.json và tìm key "rootDir"{
         bỏ cmt key "rootDir" và sửa value key "rootDir" thành <path to folder contains all...
-        src file ts (file want to be compiled) , begin from folder contains tsconfig.json>
+        src file ts /*file want to be compiled*/ , begin from folder contains tsconfig.json>
     }
     B4: truy cập vào tsconfig.json và tìm key "outDir"{
         bỏ cmt key "outDir" và sửa value key "outDir" thành <path to folder with level... 
