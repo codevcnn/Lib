@@ -46,3 +46,75 @@ export function alignCenter_absolute_horizontal(ele_to_align, baseEle) {
     ele_to_align.style.left =
         (total_widthOf_baseEle - total_widthOf_ele_to_align) / 2 + 'px'
 }
+
+// random
+export const randoms = (option, lengthOfThis) => {
+    switch (option) {
+        case 'number':
+            if (lengthOfThis < 1) return null
+            return Math.floor(Math.random() * (Math.pow(10, lengthOfThis) + 1))
+        case 'upchar':
+            let upchars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            return upchars[
+                Math.floor(Math.random() * upchars.length)
+            ]
+        case 'lowchar':
+            let lowchars = 'abcdefghijklmnopqrstuvwxyz'
+            return lowchars[
+                Math.floor(Math.random() * lowchars.length)
+            ]
+        case 'char':
+            let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+            return chars[
+                Math.floor(Math.random() * chars.length)
+            ]
+        case 'charwithnum':
+            let charwithnum = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+            return charwithnum[
+                Math.floor(Math.random() * charwithnum.length)
+            ]
+        case 'name':
+            if (lengthOfThis < 2) return null
+            let lastName = ''
+            let UpperCase_FirstChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            let LowerCase_SecondChar = 'aeiouy'
+            let LowerCaseChars = 'abcdefghijklmnopqrstuvwxyz'
+            lastName += UpperCase_FirstChar[
+                Math.floor(Math.random() * UpperCase_FirstChar.length)
+            ]
+            lastName += LowerCase_SecondChar[
+                Math.floor(Math.random() * LowerCase_SecondChar.length)
+            ]
+            while (lastName[0] === lastName[1].toLowerCase()) {
+                lastName[1] = Math.floor(Math.random() * LowerCase_SecondChar.length)
+            }
+            for (let i = 0; i < lengthOfThis - 2; i++) {
+                lastName += LowerCaseChars[Math.floor(Math.random() * LowerCaseChars.length)]
+            }
+            return lastName
+        default:
+            return undefined
+    }
+}
+
+// withRouter
+import {
+    useLocation,
+    useNavigate,
+    useParams
+} from "react-router-dom"
+
+export const withRouter = (Component) => {
+    function ComponentWithRouterProp(props) {
+        let location = useLocation()
+        let navigate = useNavigate()
+        let params = useParams()
+        return (
+            <Component
+                {...props}
+                router={{ location, navigate, params }}
+            />
+        )
+    }
+    return ComponentWithRouterProp
+}
