@@ -7,3 +7,5 @@ $ node ./node_modules/sass/sass.js <command>
 VD: xem version {
     $ node ./node_modules/sass/sass.js --version
 } 
+
+- drag terminal pannel up to above line 19

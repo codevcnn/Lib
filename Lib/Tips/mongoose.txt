@@ -1,0 +1,15 @@
+
+1. fix issue "user is not allowed to do action [insert] on [test.files]" and...
+1. "{"error":{"ok":0,"code":8000,"codeName":"AtlasError"}}"
+    __solve{
+        look 'Security' tab and press 'Database Access' tab and at 'Database Users' tab...
+        and at database want to upload press 'EDIT' button and at 'Database User Privileges'...
+        tab press 'Built-in Role' pannel and select 'Read and write to any database' option...
+        and scroll down and press 'Update User' button
+    }
+    __refference{
+        __images{
+            __cd{ ../Images/mongoose_upload_1.png }
+            __cd{ ../Images/mongoose_upload_2.png }
+        }
+    }

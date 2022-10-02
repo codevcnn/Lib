@@ -12,7 +12,7 @@
     B4: truy cập vào tsconfig.json và tìm key "outDir"{
         bỏ cmt key "outDir" và sửa value key "outDir" thành <path to folder with level... 
         is lower than folder contains tsconfig created in B1 , begin from folder contains tsconfig.json>
-            VD: We have the following folder tree {
+            ^VD: We have the following folder tree {
             test/
             |---alpha/
             |   |---src/

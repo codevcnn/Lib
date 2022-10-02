@@ -54,10 +54,11 @@
       })
 
 
-      
+
     const getFetch = async () => {
       /* use await keyword to get argument of fetch() , this time value of fetchor is 
-      argument of fecth() , use await keyword or use then() to get argument of */
+      argument of fecth() , use await keyword or use then() to get argument of 
+      that promise (fecth())*/
       let fetchor = await fetch('https://jsonplaceholder.typicode.com/todos/1')
       let data = await fetchor.json()
       console.log(data)
