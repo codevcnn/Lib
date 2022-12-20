@@ -1,0 +1,7 @@
+
+* How to kill server is working on a port:
+- open cmd
+- enter:
+$ netstat -ano|findstr "PID :3000"
+# with :3000 is the port want to find
+- after all the cmd will display detail about server is working

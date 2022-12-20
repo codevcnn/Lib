@@ -10,14 +10,14 @@ export default function find_parentEle_hasClass(child_ele, ele_class) {
 // căn giữa theo chiều dọc với ptu cha tại thời điểm display != none
 export function alignCenter_absolute_cross(ele_to_align, baseEle) {
     let computedStyleOf_baseEle = getComputedStyle(baseEle)
-    let total_heightOf_baseEle = 
+    let total_heightOf_baseEle =
         computedStyleOf_baseEle.height.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_baseEle.paddingTop.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_baseEle.borderTopWidth.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_baseEle.paddingBottom.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_baseEle.borderBottomWidth.match(/[0-9]+/)[0] * 1
     let computedStyleOf_ele_to_align = getComputedStyle(ele_to_align)
-    let total_heightOf_ele_to_align = 
+    let total_heightOf_ele_to_align =
         computedStyleOf_ele_to_align.height.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_ele_to_align.paddingTop.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_ele_to_align.borderTopWidth.match(/[0-9]+/)[0] * 1 +
@@ -30,7 +30,7 @@ export function alignCenter_absolute_cross(ele_to_align, baseEle) {
 // căn giữa theo chiều ngang với ptu cha tại thời điểm display != none
 export function alignCenter_absolute_horizontal(ele_to_align, baseEle) {
     let computedStyleOf_baseEle = getComputedStyle(baseEle)
-    let total_widthOf_baseEle = 
+    let total_widthOf_baseEle =
         computedStyleOf_baseEle.width.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_baseEle.paddingLeft.match(/[0-9]+/)[0] * 1 +
         computedStyleOf_baseEle.borderLeft.match(/[0-9]+/)[0] * 1 +
@@ -48,11 +48,15 @@ export function alignCenter_absolute_horizontal(ele_to_align, baseEle) {
 }
 
 // random
-export const randoms = (option, lengthOfThis) => {
+export const randoms = (option, lengthOfThis, min, max) => {
     switch (option) {
         case 'number':
+            // random from 1 to 10 * lengthOfThis (lengthOfThis has max value is 15)
             if (lengthOfThis < 1) return null
             return Math.floor(Math.random() * (Math.pow(10, lengthOfThis) + 1))
+        case 'between_two_number':
+            // include min & max
+            return Math.floor(Math.random() * (max - min + 1) + min)
         case 'upchar':
             let upchars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             return upchars[

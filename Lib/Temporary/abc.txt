@@ -1,0 +1,100 @@
+{
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'image_link',
+      'name',
+      'category',
+      'rating',
+      'price',
+      'shop',
+      'is_foreign_goods',
+      'sold'
+    ],
+    properties: {
+      name: {
+        bsonType: 'string',
+        description: 'must be string'
+      },
+      category: {
+        bsonType: 'string',
+        description: 'must be string'
+      },
+      rating: {
+        bsonType: 'object',
+        description: 'must be object',
+        required: [
+          'rate',
+          'count'
+        ],
+        properties: {
+          rate: {
+            bsonType: 'double',
+            description: 'must be real numer'
+          },
+          count: {
+            bsonType: 'int',
+            description: 'must be number'
+          }
+        }
+      },
+      price: {
+        bsonType: 'int',
+        description: 'must be number',
+        minimum: 0
+      },
+      shop: {
+        bsonType: 'object',
+        description: 'must be object',
+        required: [
+          'id',
+          'name'
+        ],
+        properties: {
+          id: {
+            bsonType: 'int',
+            description: 'must be number'
+          },
+          name: {
+            bsonType: 'string',
+            description: 'must be string'
+          }
+        }
+      },
+      is_foreign_goods: {
+        bsonType: 'bool',
+        description: 'must be boolen'
+      },
+      sold: {
+        bsonType: 'object',
+        description: 'must be object',
+        required: [
+          'count',
+          'in_a_week'
+        ],
+        properties: {
+          count: {
+            bsonType: 'int',
+            description: 'must be number'
+          },
+          in_a_week: {
+            bsonType: 'int',
+            description: 'must be number'
+          }
+        }
+      },
+      image_link: {
+        bsonType: 'string',
+        description: 'must be string'
+      },
+      country: {
+        bsonType: 'string',
+        description: 'must be string'
+      },
+      createdOn: {
+        bsonType: 'date',
+        description: 'must be date'
+      }
+    }
+  }
+}
