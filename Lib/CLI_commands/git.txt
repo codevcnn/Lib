@@ -22,3 +22,18 @@
         git push -u origin main
     }
 }
+
+- push something to a repo:
+{
+    ${
+        git add .
+        git commit -m "<write something>"
+        git push <repo> <branch>
+
+        VD:{
+            git add .
+            git commit -m "update Lib"
+            git push Lib main
+        }
+    }
+}
