@@ -12,4 +12,5 @@
     **: lưu ý
     #: comment
     /**/: comment trong khu vực /**/
+    +: mô tả những gì cần làm mà chỉ có tiêu đề , ko có phần nội dung
 }

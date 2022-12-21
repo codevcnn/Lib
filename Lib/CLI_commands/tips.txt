@@ -4,8 +4,8 @@ $ npm ls -g --depth 0
 
 - dùng CLI để run package:
 $ node ./node_modules/sass/sass.js <command>
-VD: xem version {
+__VD: check version {
     $ node ./node_modules/sass/sass.js --version
 } 
 
-- drag terminal pannel up to above line 19
++ drag terminal pannel up to above line 19

@@ -1,10 +1,10 @@
 
 1. Using performance.now():
     __js:{
-        var startTime = performance.now()
+        let startTime = performance.now()
         doSomething()   # measured code goes between startTime and endTime
-        var endTime = performance.now()
-        var time_execute = endTime - startTime
+        let endTime = performance.now()
+        let time_execute = endTime - startTime
         console.log('>>> time_execute execute in ms >>>', time_execute)
     }
 
@@ -19,11 +19,11 @@
 
 3. Using Date().getTime():
     __js:{
-        var startTime = new Date().getTime()
+        let startTime = new Date().getTime()
         for (i = 0; i < 50000; ++i) {
             # do something
         }
-        var endTime = new Date().getTime()
-        var time_execute = endTime - startTime
+        let endTime = new Date().getTime()
+        let time_execute = endTime - startTime
         console.log('>>> time_execute execute >>>', time_execute)
     }
